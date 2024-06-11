@@ -1,15 +1,31 @@
 # hanja_hangeul_translation
 
-## 실행
+## 설명
+* 한자, 영어의 경우 인식이 잘 되나 easyocr 자체가 한자, 한국어를 같이 사용할 수 없어서 중국어 번체(대만, 한국 한자), 영어만 인식하도록 설정했다. 나머지 언어는 작동할경우 이상하게 인식된다.
 
+### 실행파일
+* runfile > dist > main.exe
+
+## 결과
+### 메인
+![이미지](./img/readme/메인.png)
+
+### 번역
+![이미지](./img/readme/번역.png)
+
+### 이미지 선택 안한경우
+![이미지](./img/readme/이미지선택안한경우.png)
 
 ## 개발자
-sedoll (오세훈) <br>
+sedoll <br>
 [naverBlog](https://blog.naver.com/tmvmffpsej) <br>
 [velog](https://velog.io/@sedo11/posts) <br>
 
 ## devlop
 python 3.8.10 <br>
+tkinter <br>
+easyocr <br>
+hanja <br>
 
 ## reference
 [한자 한글 번역 라이브러리](https://github.com/suminb/hanja) <br>
@@ -18,7 +34,7 @@ python 3.8.10 <br>
 ## 문제점
 
 ### 중국어와 한국어가 함께 인식이 안되는 이유
-> 내부 모듈 코드를 확인해보니 reader 부분에서 모델을 선택할 때 한, 중, 일 그리고 몇몇 언어는 영어랑만 대응되게 코드가 짜있어서 안된다.
+* 내부 모듈 코드를 확인해보니 reader 부분에서 모델을 선택할 때 한, 중, 일 그리고 몇몇 언어는 영어랑만 대응되게 코드가 짜있어서 안된다.
 
 ```python
 # easyocr.py 코드 일부분
