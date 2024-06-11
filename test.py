@@ -1,6 +1,5 @@
 import easyocr
 import hanja
-import re
 
 img_url = "./img/test/chinese_tra.jpg"
 
@@ -8,13 +7,12 @@ img_url = "./img/test/chinese_tra.jpg"
 # https://www.jaided.ai/easyocr/
 # 중국어 번체, 영어
 reader = None
-# cpu 사용 버전
-# reader = easyocr.Reader(['ch_sim','en'], gpu=False)
-# gpu 사용 버전
-reader = easyocr.Reader(['ch_tra', 'en'])
+
+gpu = False # False CPU, True GPU
+reader = easyocr.Reader(['ch_tra'], gpu)
 
 # 이미지 내의 텍스트를 list 형태로 추출
-with open("./img/test/chinese_tra.jpg", "rb") as f:
+with open(img_url, "rb") as f:
     img = f.read()
 
 # 추출된 정보중에 글자만 한 개의 list 형태로 return
