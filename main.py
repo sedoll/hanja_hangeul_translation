@@ -10,9 +10,6 @@ from tkinter import Radiobutton
 # 파일 경로를 저장할 전역 변수
 file_path = ""
 
-# 결과
-result = ""
-
 def info():
     msgbox.showinfo("알림", "번역이 완료되었습니다.")
 
